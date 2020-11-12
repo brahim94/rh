@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class tech_rh(models.Model):
-    _name = 'tech.rh'
+    _inherit = "hr.employee"
 
     matricule = fields.Char('Matricule')
     matricule_interne = fields.Char('Matricule (Interne)')
@@ -23,19 +23,19 @@ class tech_rh(models.Model):
 class grade(models.Model):
     _name = 'grade.rh'
 
-    name = fields.Many2one('hr.employee', string="nom", required=True)
+    name = fields.Char(string="nom", required=True)
 
 class corps(models.Model):
     _name = 'corps.rh'
 
-    name = fields.Many2one('hr.employee', string="nom", required=True)
+    name = fields.Char(string="nom", required=True)
 
 class echelle(models.Model):
     _name = 'echelle.rh'
 
-    name = fields.Many2one('hr.employee', string="nom", required=True)
+    name = fields.Char(string="nom", required=True)
 
 class echelon(models.Model):
     _name = 'echelon.rh'
 
-    name = fields.Many2one('hr.employee', string="nom", required=True)
+    name = fields.Char(string="nom", required=True)

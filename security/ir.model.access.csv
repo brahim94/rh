@@ -1,5 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tech_rh,access_tech_rh,model_tech_rh,base.group_user,1,1,1,1
 access_grade_rh,access_grade_rh,model_grade_rh,base.group_user,1,1,1,1
 access_corps_rh,access_corps_rh,model_corps_rh,base.group_user,1,1,1,1
 access_echelle_rh,access_echelle_rh,model_echelle_rh,base.group_user,1,1,1,1
