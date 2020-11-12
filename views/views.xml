@@ -1,0 +1,68 @@
+<odoo>
+  <data>
+<record id='tech_rh_view_form' model='ir.ui.view'>
+            <field name="name">tech.rh.form</field>
+            <field name="model">tech.rh</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                    <group col="2">
+                                <group>
+                                    <field name="matricule"/>
+                                    <field name="matricule_interne" />
+                                    <field name="n_rcar" />
+                                    <field name="n_cmr"/>
+                                    <field name="indice"/>
+                                    <field name="grade_id"/>
+                                    <field name="corps_id"/>
+                                    <field name="echelle_id"/>
+                                    <field name="echelon_id"/>
+                                </group>
+                                <group>
+                                    <field name="date_grade"/>
+                                    <field name="date_echelon"/>
+                                    <field name="date_ambauche"/>
+                                    <field name="situation"/>
+                                </group>
+                              
+                    </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tech_rh_view_tree" model="ir.ui.view">
+            <field name="name">tech.rh.tree</field>
+            <field name="model">tech.rh</field>
+            <field name="arch" type="xml">
+                <tree>
+                  <field name="matricule"/>
+                  <field name="matricule_interne" />
+                  <field name="n_rcar" />
+                  <field name="n_cmr"/>
+                  <field name="indice"/> 
+                  <field name="date_echelon"/>
+                  <field name="date_ambauche"/>
+                  <field name="situation"/>
+                </tree> 
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="tech_rh_action">
+            <field name="name">Tech_rh</field>
+            <field name="res_model">tech.rh</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                    <p class="oe_view_nocontent_smiling_face">Tech_rh</p>
+            </field>
+        </record>
+
+    <menuitem name="Tech_rh"  
+    id="tech_rh_menu" 
+    sequence="1" 
+    action="tech_rh_action"
+    groups ="base.group_user"
+    web_icon="tech_rh,static/description/icon.png"/>
+  </data>
+
+</odoo>
