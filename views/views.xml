@@ -6,24 +6,42 @@
                 <field name="model">hr.employee</field>
                 <field name="inherit_id" ref="hr.view_employee_form"/>
                 <field name="arch" type="xml">
-                    <xpath expr="//field[@name='parent_id']" position="after">
-                                    <field name="grade_id"/>
-                                    <field name="corps_id"/>
-                                    <field name="echelle_id"/>
-                                    <field name="echelon_id"/>
+                    <xpath expr="//page[@name='hr_settings']" position="after">
+                         <page name="informations_techniques" string="Informations Tchniques">
+                                <group>
+                                    <group>
+                                        <field name="grade_id" invisible="1"/>
+                                        <field name="corps_id" invisible="1"/>
+                                        <field name="echelle_id" invisible="1"/>
+                                        <field name="echelon_id" invisible="1"/>
+                                    </group>
+                                    <group>
+                                    <field name="matricule" invisible="1"/>
+                                    <field name="matricule_interne" invisible="1"/>
+                                    <field name="n_rcar" invisible="1"/>
+                                    <field name="n_cmr" invisible="1"/>
+                                    <field name="date_grade" invisible="1"/>
+                                    <field name="date_echelon" invisible="1"/>
+                                    <field name="date_ambauche" invisible="1"/>
+                                    <field name="situation" invisible="1"/>       
+                                    </group>
+                                </group>
+                            </page>
+                                
                                   
                      </xpath>
                      <xpath expr="//field[@name='company_id']" position="after">
-                                  <field name="matricule"/>
                                     <field name="matricule_interne" />
-                                    <field name="n_rcar" />
-                                    <field name="n_cmr"/>
+                                    
                                     <field name="indice"/>
-                                    <field name="date_grade"/>
-                                    <field name="date_echelon"/>
-                                    <field name="date_ambauche"/>
-                                    <field name="situation"/>
-                 </xpath>
+                      </xpath>
+                      <xpath expr="//field[@name='naviguant']" position="attributes">
+                              <attribute name="invisible">1</attribute>
+                      </xpath>
+
+                      <xpath expr="//field[@name='rcar']" position="after">
+                              <field name="n_cmr"/>
+                      </xpath>
           </field>
     </record>
   </data>
