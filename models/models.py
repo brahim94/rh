@@ -15,7 +15,7 @@ class tech_rh(models.Model):
     date_echelon = fields.Date("Date d'effet echelon")
     date_ambauche = fields.Date("Date d'ambauche")
     situation = fields.Char("Situation")
-    grade_id = fields.Many2one('grade.rh', string="Grade")
+    grade_id = fields.Many2one('grade.rh', string="Grade_")
     corps_id = fields.Many2one('corps.rh', string="Corps")
     echelle_id = fields.Many2one('echelle.rh', string="Echelle")
     echelon_id = fields.Many2one('echelon.rh', string="Echelon")
